@@ -1,0 +1,40 @@
+<div class="card colorbody">
+  <h1 class="text-center mt-4">Inventario</h1>
+
+    <div class="container py-5">
+      <div class="row text-center">
+        <div class="col-md">
+          <div class="card bg-text-light p-4">
+            <table class="table">
+              <thead style="border-radius: 3px 8px">
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Unidad de mediad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let inv of listProdInv">
+                  Codigo unico
+                  <th>{{inv.producto}}</th>
+                  <th>{{inv.precio}}</th>
+                  <th>{{inv.cantidad}}</th>
+                  <th></th>
+                  <th class="btn btn-danger"><i class="bi bi-trash-fill"></i></th>
+                  <th class="btn btn-warning"><i class="bi bi-pencil-square"></i></th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

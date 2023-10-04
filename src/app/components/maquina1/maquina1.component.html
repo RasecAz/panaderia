@@ -1,0 +1,45 @@
+<div class="card">
+  <h1 class="text-center mt-4">Registro productos venta</h1>
+
+
+
+  <div class="container py-5">
+    <div class="row text-center">
+      <div class="col-md">
+        <div class="card bg-text-light p-4">
+          <h4 class="text-center">Producto</h4>
+          <hr />
+          <!--<div class="form-group">
+            <div class="text1">
+              <label for="id">Codigo</label>
+            </div>
+            <input typeof="text" id="id" [(ngModel)]="id" class="form-control form-control-lg">
+          </div>-->
+
+          <div class="form-group">
+            <div class="text1">
+              <label for="precio">Producto</label>
+            </div>
+            <input typeof="text" id="producto" [(ngModel)]="nombreProd" class="form-control form-control-lg">
+          </div>
+
+          <div class="form-group">
+            <div *ngIf="formulario">
+              <span class="badge bg-danger">{{textIncorrec}}</span>
+            </div>
+            <div class="text1">
+              <label for="precio">Precio</label>
+            </div>
+            <input typeof="number" id="precio" [(ngModel)]="precio" class="form-control form-control-lg">
+          </div>
+          <button class="btn btn-secondary btn-lg btn-block mt-3" (click)="agregarVenta()">Agregar producto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+     
+
+    
+

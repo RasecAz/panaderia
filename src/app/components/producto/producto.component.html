@@ -1,0 +1,70 @@
+<div class="card colorbody">
+  <h1 class="text-center mt-3">Registro Ingreso productos</h1>
+
+
+  <div class="container py-5">
+    <div class="row text-center">
+      <div class="col-md">
+        <div class="card bg-text-light p-4">
+          <h4 class="text-center">Producto</h4>
+          <hr />
+          <div class="form-group">
+            <div class="text1">
+              <label for="precio">Producto</label>
+            </div>
+            <label for="producto"></label>
+            <input typeof="text" id="producto" [(ngModel)]="producto" class="form-control form-control-lg" placeholder="Producto">
+          </div>
+
+          <div class="form-group">
+            <div class="text1 mt-3">
+              <label for="precio">Precio</label>
+            </div>
+            <label for="precio"></label>
+            <input typeof="number" id="precio" [(ngModel)]="precio" class="form-control form-control-lg" placeholder="Precio">
+          </div>
+
+          <div class="form-group">
+            <div class="text1 mt-3">
+              <label for="precio">Cantidad</label>
+            </div>
+            <label for="cantidad"></label>
+            <input typeof="number" id="cantidad" [(ngModel)]="cantidad" class="form-control form-control-lg" placeholder="Cantidad">
+          </div>
+          <mat-card-header>
+            <div class="img">
+              <p class="alert alert-success sizeAlert">Seleccione la unidad del producto a ingresar</p>
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <span>Bulto por 50 kg</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Arroba</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Unidad</span>
+                </button>
+                <button mat-menu-item>
+                  <span>Caja</span>
+                </button>
+              </mat-menu>
+            </div>
+            <div mat-card-avatar class="example-header-image"></div>
+          </mat-card-header>
+          <button class="btn btn-secondary btn-lg btn-block mt-3" (click)="agregarProd()">Agregar producto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-inventario></app-inventario>
+
+
+
+
+
+
+

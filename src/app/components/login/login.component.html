@@ -1,0 +1,40 @@
+<div class="body">
+  <div class="wrapper">
+    <form [formGroup]="myForm" (ngSubmit)="submitFormulario()">
+      <h1>PANPOS</h1>
+      <div class="input-box">
+        <input formControlName="user"
+               [class.is-invalid]="f.user.errors  && f.user.touched"
+               type="email"
+               class="form-control"
+               name="email"
+               placeholder="E-mail" />
+        <i class="bi bi-person-fill-check"></i>
+        <div style="text-align: center" id="validationServerUsernameFeedback" class="invalid-feedback">
+          Usuario requerido
+        </div>
+      </div>
+      <div class="input-box">
+        <input formControlName="pass"
+               [class.is-invalid]="f.pass.errors && f.pass.touched"
+               type="password"
+               class="form-control"
+               name="password"
+               placeholder="Password" />
+        <i class="bi1 bi-lock-fill"></i>
+        <div style="text-align: center" id="validationServerUsernameFeedback" class="invalid-feedback">
+          Contraseña obligatoria
+        </div>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" />  Guardar contraseña</label>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary mt-2">Ingresar</button>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary mt-2">Registrate</button>
+      </div>
+    </form>
+  </div>
+</div>
